@@ -1,0 +1,23 @@
+ALGORITHM words and vowels
+VAR
+    sentence: STRING;
+    w , v , c : INTEGER;
+
+BEGIN
+w:=0;
+v:=0;
+c:=0;
+i:=0;
+repeat
+if sentence[i]!='.' then
+    c:= c+1;
+end if
+if sentence[i] == ' 'then
+w:= w + 1;
+end if
+if (sentence[i] =='a') or (sentence[i] =='e') or (sentence[i] =='i' ) or ( sentence[i] =='u' || sentence[i] =='o') then
+v := v + 1;
+end if
+i:=i+1;
+until (sentence[i]=='.');
+END
